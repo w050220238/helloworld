@@ -1,7 +1,6 @@
 FROM node:boron
-RUN mkdir /helloworld
-COPY . /helloworld
 WORKDIR /helloworld
+COPY . .
 RUN npm install
-RUN npm start
+CMD ["npm", "start"]
 EXPOSE 3000
